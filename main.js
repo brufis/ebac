@@ -2,6 +2,9 @@ const form = document.getElementById('formulario');
 const valorA = document.getElementById('valor-a');
 const valorB = document.getElementById('valor-b');
 
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
 const msgSucesso = `O número <b>${valorB.value}</b> é maior que o número <b>${valorA.value}</b>!`
 const msgErro = `O número <b>${valorB.value}</b> não é maior que o número <b>${valorA.value}</b> Tente novamente!`
 
@@ -16,8 +19,9 @@ containerMensagemSucesso.style.display = 'block';
 }
 
 else {
-
+    
 const containerMensagemErro = document.querySelector('.error-message');
 containerMensagemErro.innerHTML = msgErro;
 containerMensagemErro.style.display = 'block';
 }
+})
