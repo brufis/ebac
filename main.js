@@ -8,7 +8,7 @@ form.addEventListener('submit', function(e) {
 const msgSucesso = `O número <b>${valorB.value}</b> é maior que o número <b>${valorA.value}</b>!`
 const msgErro = `O número <b>${valorB.value}</b> não é maior que o número <b>${valorA.value}</b> Tente novamente!`
 
-if (valorB.value > valorA.value) {
+if (parseInt(valorB.value) > parseInt(valorA.value)) {
 
 const containerMensagemSucesso = document.querySelector('.success-message');
 containerMensagemSucesso.innerHTML = msgSucesso;
